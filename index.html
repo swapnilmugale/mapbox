@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mapbox</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.10.1/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v1.10.1/mapbox-gl.css" rel="stylesheet" />
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.min.js"></script>
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.css" type="text/css"/>
+    <!-- Promise polyfill script required to use Mapbox GL Geocoder in IE 11 -->
+    <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
+    <script src='https://npmcdn.com/@turf/turf/turf.min.js'></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>    `
+</head>
+<body>
+<header class="header-wrapper">
+    <h1>Map with Filters</h1>
+</header>
+<main>
+    <section class="map-wrapper">
+        <div class="display-wrapper" id="display-wrapper">
+            <label class="source">Source Coordinates = <div id="CoordinateSource"></div></label>
+            <label class="source">Destination Coordinates = <div id="CoordinateDest"></div></label>
+
+            
+        </div>
+        <div id="map"></div>
+        <div class="input-wrapper">
+            <select name="interest-area" id="interest-area" class="interest-area">
+                <option value="Religious">Religious Places</option>
+                <option value="Foodie">Foodie</option>
+                <option value="Heritages">Heritages</option>
+                <option value="Nature">Nature</option>
+            </select>
+        </div>
+    </section>
+    <section class="path-wrapper">
+        <div class="path-coords" id="path-coords"></div>
+    </section>
+</main>
+<script src="js/script.js">
+
+</script>
+</body>
+</html>
